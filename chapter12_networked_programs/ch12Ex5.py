@@ -20,9 +20,6 @@ try:
         
     mysocket.close()
 
-    #headerPos = str(recievedData).find(r"\r\n\r\n")
-    #print(str(recievedData)[headerPos + 6:])
-
     headerPos = recievedData.decode().find("\r\n\r\n")
     print(recievedData.decode()[headerPos:].strip())
 
